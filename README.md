@@ -1,1 +1,1 @@
-# python-projecteuler
+https://projecteuler.net/archives
