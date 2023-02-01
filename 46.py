@@ -1,6 +1,6 @@
-# we need only odd_primes
 import math
 
+# we need only odd_primes
 primes = [3]
 
 
