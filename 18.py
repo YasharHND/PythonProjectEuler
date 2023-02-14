@@ -16,6 +16,7 @@ raw = """
 04 62 98 27 23 09 70 98 73 93 38 53 60 04 23
 """
 
+# problem 18 is solved much better using AWS CodeWhisperer
 triangle = [list(map(int, line.split())) for line in raw.split("\n")[1:-1]]
 while len(triangle) > 1:
     target_row = triangle[-2]
