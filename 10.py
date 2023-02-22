@@ -1,13 +1,14 @@
-import math
+import time
+
+from primes import is_prime
 
 
-def is_prime(number):
-    if number % 2 == 0:
-        return False
-    for i in range(2, int(math.sqrt(number) + 1)):
-        if number % i == 0:
-            return False
-    return True
+def solve():
+    return 2 + sum(i for i in range(3, 2_000_000, 2) if is_prime(i))
 
 
-print(2 + sum(n for n in range(3, 2000000) if is_prime(n)))
+srt = time.time()
+answer = solve()
+end = time.time()
+print(answer)
+print(f"Took {end - srt} seconds to execute...")
