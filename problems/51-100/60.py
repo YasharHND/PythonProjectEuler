@@ -1,13 +1,6 @@
-import math
+from modules.primes import is_prime
 
 primes = [3]
-
-
-def is_prime(number):
-    for i in range(3, math.isqrt(number) + 1):
-        if number % i == 0:
-            return False
-    return True
 
 
 def next_prime():

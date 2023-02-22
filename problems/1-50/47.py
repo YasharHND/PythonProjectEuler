@@ -1,4 +1,4 @@
-from primes import distinct_prime_factors
+from modules.primes import distinct_prime_factors
 
 target = []
 k = 1

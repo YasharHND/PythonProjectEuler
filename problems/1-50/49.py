@@ -1,16 +1,7 @@
-import itertools
-import math
 from functools import reduce
 from itertools import product
 
-
-def is_prime(n):
-    if n % 2 == 0:
-        return False
-    for i in range(3, int(math.sqrt(n)) + 1):
-        if n % i == 0:
-            return False
-    return True
+from modules.primes import is_prime
 
 
 def is_another_permutation(p, n):

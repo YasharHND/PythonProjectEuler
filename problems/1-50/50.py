@@ -1,14 +1,6 @@
-import math
-
+from modules.primes import is_prime
 
 primes = [2, 3]
-
-
-def is_prime(n):
-    for i in range(3, math.isqrt(n) + 1):
-        if n % i == 0:
-            return False
-    return True
 
 
 def get_prime(idx):

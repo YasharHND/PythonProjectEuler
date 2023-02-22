@@ -1,15 +1,10 @@
 import math
 
+from modules.primes import is_prime
+
 
 def is_end_of_circle(number):
     return number % 2 != 0 and math.isqrt(number) ** 2 == number
-
-
-def is_prime(number):
-    for i in range(3, math.isqrt(number) + 1):
-        if number % i == 0:
-            return False
-    return True
 
 
 n = 1

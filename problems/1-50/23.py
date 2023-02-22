@@ -1,9 +1,8 @@
-def sum_of_divisors(n):
-    return 1 + sum([k for k in range(2, (n // 2) + 1) if n % k == 0])
+from modules.numbers import divisors_sum
 
 
 def is_abundant(n):
-    return sum_of_divisors(n) > n
+    return divisors_sum(n) > n
 
 
 limit = 28123

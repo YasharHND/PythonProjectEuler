@@ -1,14 +1,9 @@
 import math
 
+from modules.primes import is_prime
+
 # we need only odd_primes
 primes = [3]
-
-
-def is_prime(n):
-    for i in range(3, int(math.sqrt(n)) + 1):
-        if n % i == 0:
-            return False
-    return True
 
 
 def generate_primes(n):

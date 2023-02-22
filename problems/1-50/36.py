@@ -1,9 +1,4 @@
-def is_palindrome(number):
-    for i in range(len(number) // 2):
-        if number[i] != number[-1 - i]:
-            return False
-    return True
-
+from modules.strings import is_palindrome
 
 summation = 0
 for i in range(1, 1_000_000):

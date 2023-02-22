@@ -1,6 +1,6 @@
 import time
 
-from primes import is_prime
+from modules.primes import is_prime
 
 
 def solve():

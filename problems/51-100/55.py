@@ -1,9 +1,4 @@
-def is_palindrome(number):
-    str_number = str(number)
-    for i in range(len(str_number) // 2):
-        if str_number[i] != str_number[-1 - i]:
-            return False
-    return True
+from modules.strings import is_palindrome
 
 
 def reverse(number):
@@ -14,7 +9,7 @@ def is_lychrel(nuber):
     summation = nuber
     for _ in range(49):
         summation += reverse(summation)
-        if is_palindrome(summation):
+        if is_palindrome(str(summation)):
             return False
     return True
 

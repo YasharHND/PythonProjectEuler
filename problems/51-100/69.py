@@ -1,7 +1,7 @@
 import math
 import time
 
-from primes import distinct_prime_factors
+from modules.primes import distinct_prime_factors
 
 
 # https://en.wikipedia.org/wiki/Euler%27s_totient_function
