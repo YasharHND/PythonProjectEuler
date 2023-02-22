@@ -1,24 +1,23 @@
+import time
 from functools import reduce
-from math import sqrt, ceil, gcd
 
 
-def triplets_with_sum(number):
-    triplets = []
-    for n in range(1, ceil(sqrt(number))):
-        for m in range(n + 1, ceil(sqrt(number))):
-            if gcd(n, m) > 1 or (n % 2 == 1 and m % 2 == 1):
-                continue
-            k, a, b, c = 0, 0, 0, 0
-            while a + b + c < number:
-                k += 1
-                a, b, c = calc_triplet(n, m, k)
-            if a + b + c == number:
-                triplets.append(sorted([a, b, c]))
-    return triplets
+def pythagorean_triplet(m, n):
+    return m ** 2 - n ** 2, 2 * m * n, m ** 2 + n ** 2
 
 
-def calc_triplet(n, m, k):
-    return k * (m ** 2 - n ** 2), k * 2 * m * n, k * (m ** 2 + n ** 2)
+def solve():
+    m = 2
+    while True:
+        for n in range(1, m):
+            triplet = pythagorean_triplet(m, n)
+            if sum(triplet) == 1000:
+                return reduce(lambda x, y: x * y, triplet)
+        m += 1
 
 
-print(reduce(lambda x, y: x * y, triplets_with_sum(1000)[0]))
+srt = time.time()
+answer = solve()
+end = time.time()
+print(answer)
+print(f"Took {end - srt} seconds to execute...")
