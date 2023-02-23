@@ -1,10 +1,9 @@
-import math
-
+from modules.numbers import is_perfect_square
 from modules.primes import is_prime
 
 
 def is_end_of_circle(number):
-    return number % 2 != 0 and math.isqrt(number) ** 2 == number
+    return number % 2 != 0 and is_perfect_square(number)
 
 
 n = 1

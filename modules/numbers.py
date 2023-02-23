@@ -7,3 +7,7 @@ def divisors_sum(number):
 
 def factorial(number):
     return reduce(lambda x, y: x * y, [i for i in range(1, number + 1)]) if number > 0 else 1
+
+
+def is_perfect_square(number):
+    return number ** 0.5 % 1 == 0

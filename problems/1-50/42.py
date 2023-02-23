@@ -1,5 +1,6 @@
-import math
 import string
+
+from modules.numbers import is_perfect_square
 
 
 def word_value(word):
@@ -9,7 +10,7 @@ def word_value(word):
 # https://www.youtube.com/watch?v=fzhYE2v3ojY
 def is_triangle(number):
     testing_number = 1 + (8 * number)
-    return (math.isqrt(testing_number) ** 2) == testing_number
+    return is_perfect_square(testing_number)
 
 
 with open("42.txt", "r") as file:
