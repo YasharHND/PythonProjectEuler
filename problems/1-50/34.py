@@ -1,9 +1,6 @@
-from functools import reduce
+from modules.numbers import factorial
 
-
-factorials = [1]
-for i in range(1, 10):
-    factorials.append(reduce(lambda x, y: x * y, [i for i in range(1, i + 1)]))
+factorials = [1] + [factorial(i) for i in range(1, 10)]
 
 
 def digits_factorial(number):
