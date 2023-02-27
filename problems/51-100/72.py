@@ -6,17 +6,11 @@ import sympy
 from sortedcontainers import SortedSet
 
 
-def compute_hcf(x, y):
-    while y:
-        x, y = y, x % y
-    return x
-
-
 def count_by_generating(limit):
     sequence = SortedSet()
     for d in range(2, limit + 1):
         for n in range(1, d):
-            if compute_hcf(n, d) == 1:
+            if math.gcd(n, d) == 1:
                 sequence.add(Fraction(n, d))
     return len(sequence)
 
