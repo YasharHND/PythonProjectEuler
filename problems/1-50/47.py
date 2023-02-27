@@ -1,9 +1,9 @@
-from modules.primes import distinct_prime_factors
+import sympy
 
 target = []
 k = 1
 while True:
-    if len(distinct_prime_factors(k)) == 4:
+    if len(sympy.primefactors(k)) == 4:
         target.append(k)
         if len(target) == 4:
             print(target[0])

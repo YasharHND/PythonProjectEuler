@@ -1,15 +1,15 @@
 import math
 import time
 
-from modules.primes import distinct_prime_factors
+import sympy
 
 
 # https://en.wikipedia.org/wiki/Euler%27s_totient_function
 def totient(number):
     product = number
-    for factor in distinct_prime_factors(number):
+    for factor in sympy.primefactors(number):
         product *= 1 - (1 / factor)
-    return math.ceil(product)
+    return math.floor(product)
 
 
 def solve():

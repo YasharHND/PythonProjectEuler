@@ -1,3 +1,3 @@
-from modules.primes import distinct_prime_factors
+import sympy
 
-print(max(distinct_prime_factors(600851475143)))
+print(max(sympy.primefactors(600851475143)))
