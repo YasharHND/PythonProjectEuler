@@ -2,6 +2,7 @@ import math
 import time
 
 
+# https://www.youtube.com/watch?v=TK3Tt4x3Clw
 def count_fractions(d):
     lower_limit = math.ceil(d / 3)
     if lower_limit <= 1:
