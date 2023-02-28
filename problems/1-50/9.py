@@ -2,6 +2,7 @@ import time
 from functools import reduce
 
 
+# https://en.wikipedia.org/wiki/Pythagorean_triple#Generating_a_triple
 def pythagorean_triplet(m, n):
     return m ** 2 - n ** 2, 2 * m * n, m ** 2 + n ** 2
 

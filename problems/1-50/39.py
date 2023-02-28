@@ -1,8 +1,11 @@
+import math
+
+
 def possibilities_count(perimeter):
     count = 0
     for c in range((perimeter // 3) + 1, perimeter - 1):
         remaining = perimeter - c
-        for a in range(1, remaining // 2):
+        for a in range(1, math.ceil(remaining / 2)):
             b = remaining - a
             if (a ** 2) + (b ** 2) == c ** 2:
                 count += 1
